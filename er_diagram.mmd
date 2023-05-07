@@ -1,0 +1,17 @@
+%%{init: {'theme':'neutral'}}%%
+erDiagram
+    team ||--o{ hero : "id = team_id"
+
+    team {
+        int id PK
+        string name
+        string headquarters
+    }
+
+    hero {
+        int id PK
+        string name
+        string secret_name
+        int age
+        int team_id FK
+    }
